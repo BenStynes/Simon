@@ -20,15 +20,13 @@ private:
 	void update(sf::Time t_deltaTime);
 	void render();
 	
-	void setupFontAndText();
-	void setupSprite();
+	void setupButtons(); //set up button properties
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
-	sf::Text m_welcomeMessage; // text used for message on screen
-	sf::Texture m_logoTexture; // texture used for sfml logo
-	sf::Sprite m_logoSprite; // sprite used for sfml logo
-	bool m_exitGame; // control exiting game
+	bool m_exitGame; // bool to control exiting game
+
+	sf::RectangleShape m_redSquare; //red buttom/ light
 
 };
 
