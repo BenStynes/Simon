@@ -11,7 +11,8 @@ Game::Game() :
 	m_redSquare{ sf::Vector2f{200.0f, 200.0f} },
 	m_yellowSquare{sf::Vector2f{200,200}},
 	m_greenSquare{sf::Vector2f{200,200}},
-	m_blueSquare{ sf::Vector2f{200,200} }
+	m_blueSquare{ sf::Vector2f{200,200} },
+	m_currentGameMode{ GameMode::Starting }
 {
 	setupButtons();
 	setupText();
@@ -85,7 +86,7 @@ void Game::setupText()
 	m_statusText.setFillColor(WHITE);
 	m_statusText.setCharacterSize(22);
 	m_statusText.setPosition(500, 453);
-	m_statusText.setString("Test");//no status on menu screen;
+	m_statusText.setString(" ");//no status on menu screen;
 		
 
 }
@@ -157,10 +158,14 @@ void Game::render()
 	m_window.draw(m_yellowSquare);
 	m_window.draw(m_blueSquare);
 	m_window.draw(m_titleText);
-	m_window.draw(m_instructionTextGreen);
-	m_window.draw(m_instructionTextYellow);
-	m_window.draw(m_instructionTextBlue);
-	m_window.draw(m_instructionTextRed);
+	if (GameMode::Starting == m_currentGameMode)
+	{
+
+		m_window.draw(m_instructionTextGreen);
+		m_window.draw(m_instructionTextYellow);
+		m_window.draw(m_instructionTextBlue);
+		m_window.draw(m_instructionTextRed);
+	}
 	m_window.draw(m_statusText);
 	m_window.display();
 }

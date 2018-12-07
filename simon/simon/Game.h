@@ -4,6 +4,18 @@
 
 #include <SFML/Graphics.hpp>
 
+/// <summary>
+/// the four different modes our game can be in
+/// </summary>
+
+enum class GameMode
+{
+	Showing,
+	Receiving,
+	GameOver,
+	Starting
+};
+
 class Game
 {
 public:
@@ -48,6 +60,9 @@ private:
 	sf::Text m_instructionTextGreen; // text for greem instruction 
 	sf::Text m_instructionTextYellow; // text for yellow  instruction 
 	sf::Text m_statusText; //status text
+
+	GameMode m_currentGameMode; //current mode of the game
+
 };
 
 #endif // !GAME
