@@ -56,7 +56,40 @@ void Game::setupText()
 	m_titleText.setPosition(50, 30);
 	m_titleText.setString("S I M O N");
 
+	//setup green message easy game 8 
+	m_instructionTextGreen.setFont(m_imapctFont);
+	m_instructionTextGreen.setFillColor(GREEN);
+	m_instructionTextGreen.setCharacterSize(32);
+	m_instructionTextGreen.setPosition(50, 100);
+	m_instructionTextGreen.setString("Press green for \n an easy game");
+	//setup red text for medium game 16 
+	m_instructionTextRed.setFont(m_imapctFont);
+	m_instructionTextRed.setFillColor(RED);
+	m_instructionTextRed.setCharacterSize(32);
+	m_instructionTextRed.setPosition(50, 200);
+	m_instructionTextRed.setString("Press red for \n a medium game");
+	//setup yellow text for hard  game 32 
+	m_instructionTextYellow.setFont(m_imapctFont);
+	m_instructionTextYellow.setFillColor(YELLOW);
+	m_instructionTextYellow.setCharacterSize(32);
+	m_instructionTextYellow.setPosition(50, 300);
+	m_instructionTextYellow.setString("Press yellow for \n a hard game");
+	//setup status font 
+	m_instructionTextBlue.setFont(m_imapctFont);
+	m_instructionTextBlue.setFillColor(BLUE);
+	m_instructionTextBlue.setCharacterSize(32);
+	m_instructionTextBlue.setPosition(50, 400);
+	m_instructionTextBlue.setString("Press blue to \n exit game");
+
+	m_statusText.setFont(m_imapctFont);
+	m_statusText.setFillColor(WHITE);
+	m_statusText.setCharacterSize(22);
+	m_statusText.setPosition(500, 453);
+	m_statusText.setString("Test");//no status on menu screen;
+		
+
 }
+
 
 
 void Game::run()
@@ -124,6 +157,11 @@ void Game::render()
 	m_window.draw(m_yellowSquare);
 	m_window.draw(m_blueSquare);
 	m_window.draw(m_titleText);
+	m_window.draw(m_instructionTextGreen);
+	m_window.draw(m_instructionTextYellow);
+	m_window.draw(m_instructionTextBlue);
+	m_window.draw(m_instructionTextRed);
+	m_window.draw(m_statusText);
 	m_window.display();
 }
 

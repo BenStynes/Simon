@@ -43,7 +43,11 @@ private:
 
 	sf::Font m_imapctFont; //font used in game
 	sf::Text m_titleText; //text for title
-
+	sf::Text m_instructionTextBlue; // text for blue instruction 
+	sf::Text m_instructionTextRed; // text for red instruction 
+	sf::Text m_instructionTextGreen; // text for greem instruction 
+	sf::Text m_instructionTextYellow; // text for yellow  instruction 
+	sf::Text m_statusText; //status text
 };
 
 #endif // !GAME
