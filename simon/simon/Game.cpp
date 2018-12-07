@@ -118,6 +118,15 @@ void Game::run()
 /// </summary>
 void Game::processEvents()
 {
+	const int COL_1_LEFT = 350;
+	const int COL_1_RIGHT = 550;
+	const int COL_2_LEFT = 570;
+	const int COL_2_RIGHT = 770;
+	const int ROW_1_TOP = 20;
+	const int ROW_1_BOTTOM = 230;
+	const int ROW_2_TOP = 250;
+	const int ROW_2_BOTTOM = 450;
+
 	sf::Event event;
 	while (m_window.pollEvent(event))
 	{
@@ -131,6 +140,22 @@ void Game::processEvents()
 			{
 				m_exitGame = true;
 			}
+		}
+		//check if the event is a mouse button release
+		if (sf::Event::MouseButtonReleased == event.type)
+		{
+			//check if its on the first col
+			if (event.mouseButton.x > COL_1_LEFT && event.mouseButton.x < COL_1_RIGHT)
+			{
+				//check which row
+				if(event.mouseButton.y > ROW_1_TOP && event.mouseButton.y < ROW_1_BOTTOM)
+				{ 
+					m_greenButtonPressed = true;
+				}
+
+
+			}
+
 		}
 	}
 }

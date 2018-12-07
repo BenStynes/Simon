@@ -41,7 +41,7 @@ private:
 	const sf::Color BLUE{ 0,0,180,255 };
 	const sf::Color YELLOW{ 180,180,0,255 };
 	const sf::Color WHITE{ 255,255,255,255 };
-
+	
 
 
 	sf::RenderWindow m_window; // main SFML window
@@ -62,6 +62,10 @@ private:
 	sf::Text m_statusText; //status text
 
 	GameMode m_currentGameMode; //current mode of the game
+	bool m_redButtonPressed;//red button pressed
+	bool m_blueButtonPressed;//blue button pressed
+	bool m_greenButtonPressed;//green button pressed
+	bool m_yellowButtonPressed;//yellow button pressed
 
 };
 
