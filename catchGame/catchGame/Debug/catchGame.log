@@ -1,0 +1,10 @@
+﻿  catchGame.cpp
+g:\catchgame\catchgame\catchgame.cpp(111): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\catchgame\catchgame\catchgame.cpp(113): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\catchgame\catchgame\catchgame.cpp(156): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+g:\catchgame\catchgame\catchgame.cpp(173): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+g:\catchgame\catchgame\catchgame.cpp(190): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\catchgame\catchgame\catchgame.cpp(195): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\catchgame\catchgame\catchgame.cpp(303): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+LINK : warning LNK4081: insufficient disk space; linking nonincrementally
+  catchGame.vcxproj -> G:\catchGame\Debug\catchGame.exe
